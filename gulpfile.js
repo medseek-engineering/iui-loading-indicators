@@ -72,6 +72,9 @@
     jsFilesCombined.push(packageJson.buildSettings.destination.js +
                          '/'+packageJson.buildSettings.createTemplates.templateFile);
     jsFilesCombined.push(packageJson.buildSettings.combineFiles.ignore);
+    
+    jsFilesCombined.push(require.resolve('angular-busy'));
+    
     gulp.src(jsFilesCombined, {base: packageJson.buildSettings.base})
       .pipe(babel({
         presets: ['es2015']

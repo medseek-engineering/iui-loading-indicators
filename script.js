@@ -2,13 +2,25 @@
   'use strict';
 
   angular
-    .module('app', ['ui.bootstrap','iui.loadingIndicator'])
+    .module('LoadingIndicatorDemoApp', ['ui.bootstrap','cgBusy','ngAnimate'])
     .constant('_', window._)
-    .controller('TestController', TestController);
-
-  function TestController() {
+    .controller('LoadingIndicatorController', LoadingIndicatorController);
+  
+  function LoadingIndicatorController() {
     var vm = this;
-    vm.name = 'World!';
+    
+    vm.delay = 0;
+    vm.minDuration = 0;
+    vm.message = 'Please Wait...';
+    vm.backdrop = true;
+    vm.promise = null;
+    
+    vm.demo = function(){
+    
+      vm.promise = $http.get('http://httpbin.org/delay/3');
+    
+    };
+    
   }
 
 })();
