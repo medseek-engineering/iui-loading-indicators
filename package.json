@@ -1,5 +1,5 @@
 {
-  "name": "iui-basic",
+  "name": "iui-loading-indicator",
   "version": "1.0.0",
   "description": "Angular directive & styles",
   "main": "./lib/index.js",
@@ -13,12 +13,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/medseek-engineering/iui-basic.git"
+    "url": "https://github.com/medseek-engineering/iui-loading-indicator.git"
   },
   "author": "Influence Health, Inc.",
   "license": "BSD-2-Clause",
   "bugs": {
-    "url": "https://github.com/medseek-engineering/iui-basic/issues"
+    "url": "https://github.com/medseek-engineering/iui-loading-indicator/issues"
   },
   "dependencies": {},
   "devDependencies": {
@@ -64,8 +64,8 @@
       "iui-general"
     ],
     "createTemplates": {
-      "moduleName": "iui.basicTemplates",
-      "prefix": "/$iui-basic/",
+      "moduleName": "iui.loadingIndicatorTemplates",
+      "prefix": "/$iui-loading-indicator/",
       "templateFile": "templates.js"
     },
     "combineFiles": {

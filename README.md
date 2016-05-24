@@ -1,14 +1,4 @@
-Vars to be replaced:
- - iui-basic
- - iuiBasic
- - iui.basicTemplates
- - iui.basic
- - Basic
- - basic
-
-You will then need to change all of the file and folder names with `basic` and change them to the desired directive / module name
-
-# iui-basic
+# iui-loading-indicator
 
 *Angular version: 1.3.2*
 
@@ -28,4 +18,4 @@ https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md
 ## Changelog
 
 ### 1.0.0
-- initial creation of iui-basic directive repo
+- initial creation of iui-loading-indicator directive repo

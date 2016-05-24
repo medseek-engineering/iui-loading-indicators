@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('app', ['ui.bootstrap','iui.basic'])
+    .module('app', ['ui.bootstrap','iui.loadingIndicator'])
     .constant('_', window._)
     .controller('TestController', TestController);
 

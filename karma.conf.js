@@ -71,7 +71,7 @@ module.exports = function (config) {
 
     ngHtml2JsPreprocessor: {
       // immitates ui-core
-      prependPrefix: '/$iui-basic',
+      prependPrefix: '/$iui-loading-indicator',
       stripPrefix: 'lib/src',
       moduleName: 'templates'
     },
