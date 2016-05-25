@@ -6,7 +6,9 @@
     .constant('_', window._)
     .controller('LoadingIndicatorController', LoadingIndicatorController);
   
-  function LoadingIndicatorController() {
+  LoadingIndicatorController.$inject = ['$http'];
+  
+  function LoadingIndicatorController($http) {
     var vm = this;
     
     vm.delay = 0;
@@ -16,9 +18,9 @@
     vm.promise = null;
     
     vm.demo = function(){
-    
+      console.log('This is working');
       vm.promise = $http.get('http://httpbin.org/delay/3');
-    
+      
     };
     
   }
