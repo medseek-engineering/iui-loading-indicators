@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('LoadingIndicatorDemoApp', ['ui.bootstrap','cgBusy','ngAnimate'])
+    .module('LoadingIndicatorDemoApp', ['ui.bootstrap','ngAnimate', 'iui.loadingIndicator'])
     .constant('_', window._)
     .controller('LoadingIndicatorController', LoadingIndicatorController);
   
@@ -16,6 +16,7 @@
     vm.message = 'Please Wait...';
     vm.backdrop = true;
     vm.promise = null;
+    vm.world = "World";
     
     vm.demo = function(){
       console.log('This is working');

@@ -49,8 +49,10 @@ module.exports = function (config) {
       'node_modules/babel-polyfill/dist/polyfill.js',
       'node_modules/angular/angular.min.js',
       'node_modules/angular-mocks/angular-mocks.js',
+      'node_modules/angular-busy/dist/angular-busy.min.js',
 
       // app module dependencies
+      'lib/src/iui-module-header-with-templates.js',
       'lib/src/**/*.js',
 
       //directive templates

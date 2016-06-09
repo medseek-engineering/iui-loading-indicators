@@ -67,7 +67,7 @@
       "iui-general"
     ],
     "createTemplates": {
-      "moduleName": "iui.loadingIndicatorTemplates",
+      "moduleName": "iui.loadingIndicator",
       "prefix": "/$iui-loading-indicator/",
       "templateFile": "templates.js"
     },
