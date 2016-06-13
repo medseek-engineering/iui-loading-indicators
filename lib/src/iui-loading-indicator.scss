@@ -7,6 +7,10 @@ $blink-start-end-opacity: .30;
 $blink-middle-opacity: 1;
 $blink-start-end-size: 15px;
 
+.cg-busy-wrapper {
+  min-height: 200px;
+}
+
 .cg-busy {
   position: absolute;
   top: 0px;
@@ -14,10 +18,6 @@ $blink-start-end-size: 15px;
   right: 0px;
   bottom: 0px;
   z-index: 1001;
-  //this is for testing purposes only
-  &.ng-hide {
-    display: block !important;
-  }
 }
 
 .cg-busy-backdrop {

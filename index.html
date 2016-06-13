@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iui-loading-indicator</title>
     <link href="lib/dist/iui-loading-indicator.css" rel="stylesheet">
-    
+    <style>
+      .tab-pane .panel-body {
+        border-bottom: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+      }
+    </style>
   </head>
   <body>
     <main
@@ -17,6 +23,7 @@
       <div class="container">
         <div class="row">
           
+<!--
           <button
             id="loading-button" 
             iui-loading-label="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}"
@@ -25,8 +32,7 @@
             style="margin-top: 50px; margin-bottom: 50px">
             Button
           </button>
-          
-          <pre>{{indicator | json}}</pre>
+-->
           
           <div class="col-md-12">
               <h2>angular-busy</h2>
@@ -86,7 +92,7 @@
     
           <div class="col-md-offset-1 col-md-7" style="padding-top:28px">
     
-            <div cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+            <div class="cg-busy-wrapper" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
               <table class="table table-bordered">
                 <thead>
                   <tr>
@@ -123,7 +129,56 @@
               </table>
             </div>
           </div>
-    
+          
+          <div class="col-md-12" style="padding-top:28px">
+            <accordion close-others="oneAtATime">
+              <accordion-group heading="This is an Open Accordion." is-open="true">
+                <div class="cg-busy-wrapper" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
+                </div>
+              </accordion-group>
+              <accordion-group heading="This accordion is loading stuff in the background." is-open="false">
+                <div class="cg-busy-wrapper" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
+                </div>
+              </accordion-group>
+              <accordion-group heading="This one is also loading in the background." is-open="false">
+                <div class="cg-busy-wrapper" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
+                </div>
+              </accordion-group>
+            </accordion>
+          </div>
+          
+          <div class="col-md-12" style="padding-top:28px">
+            <tabset>
+              <tab heading="This Tab is active">
+                <div class="cg-busy-wrapper panel-body" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
+                </div>
+              </tab>
+              <tab heading="This Tab Loads in the background">
+                <div class="cg-busy-wrapper panel-body" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
+                </div>
+              </tab>
+              <tab heading="Also Loading in the background">
+                <div class="cg-busy-wrapper panel-body" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
+                </div>
+              </tab>
+            </tabset>
+          </div>
+          
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          
         </div>
     
       </div>
