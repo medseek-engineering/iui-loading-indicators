@@ -13,15 +13,13 @@
     
     vm.delay = 0;
     vm.minDuration = 0;
-    vm.message = 'Please Wait...';
+    vm.message = 'Loading';
     vm.backdrop = true;
     vm.promise = null;
     vm.world = "World";
     
     vm.demo = function(){
-      console.log('This is working');
       vm.promise = $http.get('http://httpbin.org/delay/3');
-      
     };
     
   }
