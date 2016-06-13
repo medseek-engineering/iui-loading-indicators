@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>iui-loading-indicator</title>
     <link href="lib/dist/iui-loading-indicator.css" rel="stylesheet">
-    <link href="../node_modules/angular-busy/dist/angular-busy.css" rel="stylesheet">
+    
   </head>
   <body>
     <main
@@ -19,8 +19,7 @@
           
           <button
             id="loading-button" 
-            iui-loading-label="indicator.promise"
-            iui-loading-label-options="{templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}"
+            iui-loading-label="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}"
             ng-click="indicator.demo()"
             class="btn btn-default"
             style="margin-top: 50px; margin-bottom: 50px">
