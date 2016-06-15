@@ -76,8 +76,7 @@
                 <button
                   id="loading-button"
                   class="btn btn-default pull-right"
-                  ng-click="indicator.demo()"
-                  iui-loading-label="{promise:indicator.promise,loading:indicator.loading,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+                  ng-click="indicator.demo()">
                   Demo
                 </button>
               </div>
@@ -87,7 +86,7 @@
     
           <div class="col-md-offset-1 col-md-7" style="padding-top:28px">
     
-            <div class="cg-busy-wrapper" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+            <div cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
               <table class="table table-bordered">
                 <thead>
                   <tr>
@@ -128,7 +127,7 @@
           <div class="col-md-12" style="padding-top:28px">
             <accordion close-others="oneAtATime">
               <accordion-group heading="This is an Open Accordion." is-open="true">
-                <div class="cg-busy-wrapper" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+                <div cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
                 </div>
               </accordion-group>
