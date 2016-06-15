@@ -6,8 +6,9 @@
 $blink-start-end-opacity: .30;
 $blink-middle-opacity: 1;
 $blink-start-end-size: 15px;
+$cg-busy-z-index: 1001;
 
-.cg-busy-wrapper {
+[cg-busy*=":"] {
   min-height: 200px;
 }
 
@@ -17,7 +18,7 @@ $blink-start-end-size: 15px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  z-index: 1001;
+  z-index: $cg-busy-z-index;
 }
 
 .cg-busy-backdrop {

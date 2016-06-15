@@ -17,6 +17,7 @@
     vm.backdrop = true;
     vm.promise = null;
     vm.world = "World";
+    vm.loading = true;
     
     vm.demo = function(){
       vm.promise = $http.get('http://httpbin.org/delay/3');

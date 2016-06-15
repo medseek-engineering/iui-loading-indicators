@@ -23,17 +23,6 @@
       <div class="container">
         <div class="row">
           
-<!--
-          <button
-            id="loading-button" 
-            iui-loading-label="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}"
-            ng-click="indicator.demo()"
-            class="btn btn-default"
-            style="margin-top: 50px; margin-bottom: 50px">
-            Button
-          </button>
--->
-          
           <div class="col-md-12">
               <h2>angular-busy</h2>
               <p class="lead">Show busy/loading indicators on any $http or $resource request, or on any promise.</p>
@@ -84,7 +73,13 @@
                 </div>
               </div>
               <div class="col-sm-offset-5 col-sm-7" style="padding-right:0px">
-                <button class="btn btn-default pull-right" ng-click="indicator.demo()">Demo</button>
+                <button
+                  id="loading-button"
+                  class="btn btn-default pull-right"
+                  ng-click="indicator.demo()"
+                  iui-loading-label="{promise:indicator.promise,loading:indicator.loading,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+                  Demo
+                </button>
               </div>
             </form>
     
