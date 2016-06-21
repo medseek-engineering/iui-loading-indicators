@@ -45,6 +45,7 @@
     "gulp-uglify": "~0.2.0",
     "gulp-util": "~2.2.12",
     "iui-general": "^1.0.0",
+    "iui-charts": "https://github.com/medseek-engineering/iui-charts",
     "jquery": "~2.1.4",
     "jshint": "~2.3.0",
     "jshint-stylish": "~1.0.0",
