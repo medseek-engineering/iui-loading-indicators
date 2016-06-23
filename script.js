@@ -316,21 +316,13 @@
     vm.message = 'Loading';
     vm.backdrop = true;
     vm.cgPromise = null;
-    vm.loadingPromise = false;
+    vm.iuiPromise = null;
     vm.world = "World";
-    console.log('Promise is ' + vm.iuiPromise + ' inside script.js');
+    vm.loadingLabel = 'Demoing';
     
     vm.demo = function(){
       vm.cgPromise = $http.get('http://httpbin.org/delay/3');
-      vm.loadingPromise = true;
-      
-      $http.get('http://httpbin.org/delay/3').then(
-      function successCallback(response) {
-        vm.loadingPromise = false;
-      }, function errorCallback(response) {
-        vm.loadingPromise = false;
-      });
-      console.log('Promise is ' + vm.iuiPromise + ' inside script.js');
+      vm.iuiPromise = $http.get('http://httpbin.org/delay/3');
     };
     
     var fromDate          = '2016-01-01';
