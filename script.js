@@ -315,12 +315,22 @@
     vm.minDuration = 0;
     vm.message = 'Loading';
     vm.backdrop = true;
-    vm.promise = null;
+    vm.cgPromise = null;
+    vm.loadingPromise = false;
     vm.world = "World";
-    vm.loading = true;
+    console.log('Promise is ' + vm.iuiPromise + ' inside script.js');
     
     vm.demo = function(){
-      vm.promise = $http.get('http://httpbin.org/delay/3');
+      vm.cgPromise = $http.get('http://httpbin.org/delay/3');
+      vm.loadingPromise = true;
+      
+      $http.get('http://httpbin.org/delay/3').then(
+      function successCallback(response) {
+        vm.loadingPromise = false;
+      }, function errorCallback(response) {
+        vm.loadingPromise = false;
+      });
+      console.log('Promise is ' + vm.iuiPromise + ' inside script.js');
     };
     
     var fromDate          = '2016-01-01';
@@ -331,8 +341,6 @@
     vm.changeDate         = changeDate;
     vm.changeData         = changeData;
     vm.showAll            = showAll;
-    
-    console.log('We are here');
     
     resetData();
 
