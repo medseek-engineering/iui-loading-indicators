@@ -89,7 +89,7 @@
                 class="btn btn-default pull-right"
                 ng-click="indicator.demo()"
                 iui-loading-label="Demoing..."
-                promise="indicator.iuiPromise">
+                promise="indicator.promise">
                 Demo
               </button>
               
@@ -100,7 +100,7 @@
         <div class="col-md-12" style="padding-top:28px">
           
           <h2>Table Example</h2>
-          <div cg-busy="{promise:indicator.cgPromise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+          <div cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
             <table class="table table-bordered">
               <thead>
                 <tr>
@@ -148,7 +148,7 @@
                 <select 
                   class="form-control"
                   iui-loading-label="Loading..."
-                  promise="indicator.iuiPromise">
+                  promise="indicator.promise">
                   <option value=''>1</option>
                   <option value=''>2</option>
                   <option value=''>3</option>
@@ -164,7 +164,7 @@
                 <select multiple
                   class="form-control"
                   iui-loading-label="Loading..."
-                  promise="indicator.iuiPromise">
+                  promise="indicator.promise">
                   <option value=''>1</option>
                   <option value=''>2</option>
                   <option value=''>3</option>
@@ -181,17 +181,17 @@
           <h2>Accordion Example</h2>
           <accordion close-others="oneAtATime">
             <accordion-group heading="This is an Open Accordion." is-open="true">
-              <div cg-busy="{promise:indicator.cgPromise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+              <div cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
               </div>
             </accordion-group>
             <accordion-group heading="This accordion is loading stuff in the background." is-open="false">
-              <div class="cg-busy-wrapper" cg-busy="{promise:indicator.cgPromise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+              <div class="cg-busy-wrapper" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
               </div>
             </accordion-group>
             <accordion-group heading="This one is also loading in the background." is-open="false">
-              <div class="cg-busy-wrapper" cg-busy="{promise:indicator.cgPromise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+              <div class="cg-busy-wrapper" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
               </div>
             </accordion-group>
@@ -202,17 +202,17 @@
           <h2>Tab Example</h2>
           <tabset>
             <tab heading="This Tab is active">
-              <div class="cg-busy-wrapper panel-body" cg-busy="{promise:indicator.cgPromise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+              <div class="cg-busy-wrapper panel-body" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
               </div>
             </tab>
             <tab heading="This Tab Loads in the background">
-              <div class="cg-busy-wrapper panel-body" cg-busy="{promise:indicator.cgPromise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+              <div class="cg-busy-wrapper panel-body" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
               </div>
             </tab>
             <tab heading="Also Loading in the background">
-              <div class="cg-busy-wrapper panel-body" cg-busy="{promise:indicator.cgPromise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
+              <div class="cg-busy-wrapper panel-body" cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ac lacus at lectus dapibus mollis efficitur at nulla. Sed nec odio ultricies neque cursus malesuada. Cras sagittis, augue nec pulvinar gravida, turpis justo sagittis ligula, eget laoreet libero ligula eget risus. Curabitur posuere tellus lectus, in pulvinar risus luctus ac. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In id posuere nibh. Sed lobortis scelerisque lacus at ultrices. Sed placerat neque at ornare tempus. Curabitur ut dignissim nunc, vel vehicula dolor. Pellentesque tempus tortor varius maximus tincidunt. Etiam at massa vitae mi bibendum feugiat in feugiat sapien.
               </div>
             </tab>
@@ -222,7 +222,7 @@
           <h2>Chart Example</h2>
         	<iui-chart
         	  class="well"
-        	  cg-busy="{promise:indicator.cgPromise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}"
+        	  cg-busy="{promise:indicator.promise,templateUrl:indicator.templateUrl,message:indicator.message,backdrop:indicator.backdrop,delay:indicator.delay,minDuration:indicator.minDuration}"
             date-range="indicator.dateRange"
             chart-settings="indicator.healthInformation.settings"
             display-fields="indicator.healthInformation.displayFields"

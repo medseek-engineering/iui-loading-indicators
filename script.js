@@ -315,14 +315,12 @@
     vm.minDuration = 0;
     vm.message = 'Loading';
     vm.backdrop = true;
-    vm.cgPromise = null;
-    vm.iuiPromise = null;
+    vm.promise = null;
     vm.world = "World";
     vm.loadingLabel = 'Demoing';
     
     vm.demo = function(){
-      vm.cgPromise = $http.get('http://httpbin.org/delay/3');
-      vm.iuiPromise = $http.get('http://httpbin.org/delay/3');
+      vm.promise = $http.get('http://httpbin.org/delay/3');
     };
     
     var fromDate          = '2016-01-01';
