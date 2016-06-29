@@ -315,12 +315,29 @@
     vm.minDuration = 0;
     vm.message = 'Loading';
     vm.backdrop = true;
-    vm.promise = null;
+    vm.tablePromise = null;
+    vm.selectPromise = null;
+    vm.accordionPromise = null;
+    vm.tabPromise = null;
+    vm.chartPromise = null;
     vm.world = "World";
     vm.loadingLabel = 'Demoing';
     
-    vm.demo = function(){
-      vm.promise = $http.get('http://httpbin.org/delay/3');
+    vm.demo = function(pattern){
+      switch(pattern) {
+        case 'table': vm.tablePromise = $http.get('http://httpbin.org/delay/3');
+        break;
+        case 'select': vm.selectPromise = $http.get('http://httpbin.org/delay/3');
+        break;
+        case 'accordion': vm.accordionPromise = $http.get('http://httpbin.org/delay/3');
+        break;
+        case 'tab': vm.tabPromise = $http.get('http://httpbin.org/delay/3');
+        break;
+        case 'chart': vm.chartPromise = $http.get('http://httpbin.org/delay/3');
+        break;
+        default: console.log('working');
+      }
+      console.log(vm.tablePromise);
     };
     
     var fromDate          = '2016-01-01';
