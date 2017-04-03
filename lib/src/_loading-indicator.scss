@@ -1,2 +1,110 @@
 // Import Sass Partials
 @import "iui-loading-indicator/*.scss";
+
+$blink-start-end-opacity: .30;
+$blink-middle-opacity: 1;
+$blink-start-end-size: 15px;
+$cg-busy-z-index: 1001;
+
+[cg-busy*=":"] {
+  min-height: 200px;
+}
+
+.cg-busy {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: $cg-busy-z-index;
+}
+
+.cg-busy-backdrop {
+  background-color: white;
+  opacity: .7;
+}
+
+.cg-busy-default-spinner {
+  text-align: center;
+  margin-top: 50px;
+  div {
+    display: none;
+    border-radius: 50%;
+    background: $progress-bar-bg;
+    opacity: 0;
+    min-height: $blink-start-end-size;
+    min-width: $blink-start-end-size;
+    animation-fill-mode: both;
+    -webkit-animation: blink 2s linear infinite;
+    -moz-animation:    blink 2s linear infinite;
+    -ms-animation:     blink 2s linear infinite;
+    -o-animation:      blink 2s linear infinite;
+    animation:         blink 2s linear infinite;
+  }
+  & .bar1,
+  & .bar2,
+  & .bar3 {
+    display: inline-block;
+  }
+  & .bar1 {
+    animation-delay: 0s;
+  }
+  & .bar2 {
+    animation-delay: 0.2s;
+  }
+  & .bar3 {
+    animation-delay: 0.4s;
+  }
+}
+
+.cg-busy-default-text {
+  text-align: center;
+  font-size: $large-font-size;
+}
+
+@-webkit-keyframes blink {
+    0% {
+      opacity: $blink-start-end-opacity;
+      transform: scale(1);
+    }
+    5% {
+      opacity: $blink-middle-opacity;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: $blink-start-end-opacity;
+      transform: scale(1);
+    }
+}
+@-moz-keyframes blink {
+    0% {
+      opacity: $blink-start-end-opacity;
+      transform: scale(1);
+    }
+    5% {
+      opacity: $blink-middle-opacity;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: $blink-start-end-opacity;
+      transform: scale(1);
+    }
+}
+@keyframes blink {
+    0% {
+      opacity: $blink-start-end-opacity;
+      transform: scale(.25);
+    }
+    20% {
+      opacity: $blink-middle-opacity;
+      transform: scale(1);
+    }
+    40% {
+      opacity: $blink-middle-opacity;
+      transform: scale(.85);
+    }
+    100% {
+      opacity: $blink-start-end-opacity;
+      transform: scale(.25);
+    }
+}
